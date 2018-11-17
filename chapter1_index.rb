@@ -39,3 +39,8 @@ expect(chpt1.one_away("palles", "pale")).to be(false)
 expect(chpt1.string_compression("aabcccccaaa")).to eq('a2b1c5a3')
 expect(chpt1.string_compression("abcdkgie")).to eq('abcdkgie')
 expect(chpt1.string_compression("dddoegjeiegegkkkkkkfgiwgjwwlll")).to eq('d3o1e1g1j1e1i1e1g1e1g1k6f1g1i1w1g1j1w2l3')
+
+# 1.9
+expect(chpt1.string_rotation("waterbottle", "erbottlewat")).to be(true)
+expect(chpt1.string_rotation("waterbottle", "bottlewater")).to be(true)
+expect(chpt1.string_rotation("waterbottle", "waterbtolle")).to be(false)

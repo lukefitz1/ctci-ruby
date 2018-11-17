@@ -170,4 +170,24 @@ class StringsAndArrays
 		return new_string
 	end
 
+	# 1.7 Rotate Matrix
+	# 
+
+	# 1.8 Zero Matrix
+	# 
+
+	# 1.9 String Rotation
+	# Assume you have a method isSubstring which checks if one word is a substring of another. 
+	# Given 2 strings, s1 and s2, write code to check if s2 is a rotation of s1 using only one call to isSubstring
+	# e.g. "waterbottle" is a rotation of "erbottlewat"
+	# 
+	def is_substring(string, sub)
+		string.include? sub
+	end
+
+	def string_rotation(s1, s2)
+		new_string = "#{s1}#{s1}"
+		is_substring(new_string, s2)
+	end
+
 end
