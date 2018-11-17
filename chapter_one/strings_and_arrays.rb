@@ -144,6 +144,30 @@ class StringsAndArrays
 		return true
 	end
 
-	
+	# 1.6 String Compression
+	# Implement a method to perform basic string compression using the counts of repeated characters.
+	# For example, the string aabcccccaaa would become a2b1c5a3. If the compressed string would not become smaller 
+	# than the original string, your method should return the original string. 
+	# You can assume the string has only uppercase and lower case letters (a-z)
+	def string_compression(string)
+		# get to use a method that I wrote for a different problem!
+		if is_unique(string)
+			return string
+		end
+
+		chars = string.split('')
+		new_string = ""
+		ct = 1
+		chars.each_with_index do |char, i|
+			if char == chars[i + 1]
+				ct = ct + 1
+			else
+				new_string = "#{new_string}#{char}#{ct}"
+				ct = 1
+			end
+		end
+
+		return new_string
+	end
 
 end
